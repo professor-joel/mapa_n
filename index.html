@@ -1,100 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapa Navegacional - Algoritmos</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#conceitos">Conceitos</a></li>
-                <li><a href="#estruturas">Estruturas</a></li>
-                <li><a href="#ordens">Ordens</a></li>
-                <li><a href="#aplicacoes">Aplicações</a></li>
-                <li><a href="#sintaxe">Sintaxe</a></li> <!-- Nova seção -->
-                <li><a href="#comandos">Comandos</a></li> <!-- Nova seção -->
-            </ul>
-        </nav>
-    </header>
+    <body>
 
-    <!-- Seções principais -->
-    <section id="conceitos">
-        <h1>Conceito</h1>
-        <p>Um algoritmo é uma sequência finita e bem definida de instruções ou passos que resolvem um problema ou executam uma tarefa específica.</p>
-        <!-- Outras informações já existentes... -->
-    </section>
+        <header>
+            <h1>Algoritmos: Construindo Soluções</h1>
+        </header>
+    
+        <div class="container">
+            <!-- Card 1: Sintaxe -->
+            <div class="card">
+                <h3>Sintaxe</h3>
+                <p>Introdução sobre palavras-chave e instruções usadas na programação.</p>
+                <ul>
+                    <li onclick="openModal('Palavras-Chave', 'São palavras reservadas que têm um significado especial em uma linguagem de programação, exemplo como var, let, const, if, else, while, for, entre outras. **Não se deve utilizar essas palavras chaves como nome de variáveis**')">Palavras-Chave</li>
+                    <li onclick="openModal('Instruções', 'Comandos ou declarações que dizem ao computador o que fazer. Elas incluem atribuições de variáveis, chamadas de funções e controle de fluxo.')">Instruções</li>
+                    <li onclick="openModal('Blocos de Código', 'Conjuntos de instruções agrupados por chaves {} ou indentação. Os blocos ajudam a organizar o código, especialmente em estruturas condicionais e loops.')">Blocos de Código</li>
+                    <li onclick="openModal('Comentários', 'São textos ignorados pelo compilador ou interpretador, usados para sinalizar ou adverti ou explicar, o código para outro desenvolvedor que trabalhe no mesmo projeto ou não. Comentário pode ser apenas de uma linha, e utilizamos //, Comentário de uma ou mais linhas usamos /**/')">Comentários</li>
+                </ul>
+            </div>
+    
+            <!-- Card 2: Variáveis e Tipos de Dados -->
+            <div class="card">
+                <h3>Variáveis e Tipos de Dados</h3>
+                <p>Tipos de dados e atribuição de valores em variáveis.</p>
+                <ul>
+                    <li onclick="openModal('Atribuição de valores', 'O processo de armazenar um valor em uma variável. Exemplo: x = 5; significa que 5 é atribuído à variável x.')">Atribuição de valores</li>
+                    <li onclick="openModal('Tipos de dados', 'Os tipos de dados mais comuns incluem inteiros, strings (texto), booleanos (true/false), floats (números decimais).')">Tipos de dados</li>
+                </ul>
+            </div>
+    
+            <!-- Card 3: Operadores -->
+            <div class="card">
+                <h3>Operadores</h3>
+                <p>Operadores usados para manipulação de dados e lógica.</p>
+                <ul>
+                    <li onclick="openModal('Operadores aritméticos', 'Usados para operações matemáticas: + (adição), - (subtração), * (multiplicação), / (divisão).')">Operadores aritméticos</li>
+                    <li onclick="openModal('Operadores relacionais', 'Comparam dois valores: > (maior que), < (menor que), == (igual).')">Operadores relacionais</li>
+                    <li onclick="openModal('Operadores lógicos', 'Usados para combinar expressões booleanas: && (e), || (ou), ! (não).')">Operadores lógicos</li>
+                    <li onclick="openModal('Operadores de atribuição', 'Atribuem valores a variáveis: = (atribuição simples), += (soma e atribui), -= (subtrai e atribui).')">Operadores de atribuição</li>
+                </ul>
+            </div>
+    
+            <!-- Card 4: Comandos de Decisão -->
+            <div class="card">
+                <h3>Comandos de Decisão</h3>
+                <p>Estruturas que controlam o fluxo de decisão no código.</p>
+                <ul>
+                    <li onclick="openModal('Operador Ternário', 'Uma forma curta de escrever um if-else. Exemplo: condição ? valor1 : valor2.')">Operador Ternário</li>
+                    <li onclick="openModal('Estrutura if-else', 'Executa um bloco de código se uma condição for verdadeira e outro se for falsa.')">Estrutura if-else</li>
+                    <li onclick="openModal('Estrutura if-elseif-else', 'Várias condições são verificadas sequencialmente, permitindo múltiplas verificações.')">Estrutura if-elseif-else</li>
+                    <li onclick="openModal('Comandos de Decisão Aninhados', 'Comandos de decisão dentro de outros comandos de decisão, criando decisões complexas.')">Comandos de Decisão Aninhados</li>
+                </ul>
+            </div>
+    
+            <!-- Card 5: Comandos de Repetição -->
+            <div class="card">
+                <h3>Comandos de Repetição</h3>
+                <p>Estruturas que permitem a repetição de blocos de código.</p>
+                <ul>
+                    <li onclick="openModal('Laço for', 'Loop que se repete um número definido de vezes. Sintaxe: for(início; condição; incremento) { código }.')">Laço for</li>
+                    <li onclick="openModal('Laço while', 'Loop que se repete enquanto a condição for verdadeira. Sintaxe: while(condição) { código }.')">Laço while</li>
+                    <li onclick="openModal('Laço do...while', 'Semelhante ao while, mas garante que o código será executado ao menos uma vez.')">Laço do...while</li>
+                    <li onclick="openModal('Controle de laço: break e continue', 'break: sai do loop, continue: pula para a próxima iteração do loop.')">Controle de laço: break e continue</li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h4 id="modal-title"></h4>
+                <p id="modal-content"></p>
+            </div>
+        </div>
 
-    <section id="estruturas">
-        <h1>Estruturas</h1>
-        <!-- Outras informações já existentes... -->
-    </section>
+        <footer>
+            <p>&copy; Objeto de Aprendizagem desenvolvido por Danielle Aparecida Silva & Joel Ramos - 2024</p>
+        </footer>
 
-    <!-- Nova seção para Sintaxe -->
-    <section id="sintaxe">
-        <h1>Sintaxe</h1>
-        <h2>Palavras-Chave</h2>
-        <p>As palavras-chave são reservadas e têm um significado específico para o compilador.</p>
-
-        <h2>Instruções</h2>
-        <p>Instruções são os comandos que indicam ao computador o que fazer, como imprimir valores ou executar cálculos.</p>
-
-        <h2>Blocos de Código</h2>
-        <p>Blocos de código são agrupamentos de instruções que são executadas juntas.</p>
-
-        <h2>Comentários</h2>
-        <p>Comentários são usados para documentar o código e não são executados pelo programa.</p>
-    </section>
-
-    <!-- Nova seção para Comandos -->
-    <section id="comandos">
-        <h1>Comandos de Decisão e Repetição</h1>
-        
-        <h2>Variáveis e Tipos de Dados</h2>
-        <p>As variáveis são usadas para armazenar dados e podem ser de diferentes tipos: inteiros, strings, booleanos, etc.</p>
-
-        <h2>Atribuição de Valores</h2>
-        <p>A atribuição de valores em variáveis é feita com o operador "=".</p>
-
-        <h2>Operadores</h2>
-        <ul>
-            <li>Operadores Aritméticos: Somar, subtrair, multiplicar, dividir, etc.</li>
-            <li>Operadores Relacionais: Comparar valores (>, <, ==, etc.).</li>
-            <li>Operadores Lógicos: Trabalham com expressões booleanas (&&, ||, !).</li>
-            <li>Operadores de Atribuição: Atribuem valores a variáveis (+=, -=, etc.).</li>
-        </ul>
-
-        <h2>Comandos de Decisão</h2>
-        <p>Estrutura de controle para executar diferentes blocos de código, dependendo de condições:</p>
-        <ul>
-            <li>Operador Ternário</li>
-            <li>Estrutura if-else</li>
-            <li>Estrutura if-elseif-else</li>
-            <li>Comandos de Decisão Aninhados</li>
-        </ul>
-
-        <h2>Comandos de Repetição</h2>
-        <p>Estruturas que permitem a execução repetida de blocos de código:</p>
-        <ul>
-            <li>Laço for</li>
-            <li>Laço while</li>
-            <li>Laço do...while</li>
-            <li>Controle de laço: break e continue</li>
-            <li>Comandos de Repetição Aninhados</li>
-        </ul>
-    </section>
-
-    <!-- Seções já existentes... -->
-    <section id="ordens">
-        <h1>Ordens</h1>
-    </section>
-
-    <section id="aplicacoes">
-        <h1>Aplicações</h1>
-    </section>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
